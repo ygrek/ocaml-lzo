@@ -1,0 +1,8 @@
+# OASIS_START
+# DO NOT EDIT (digest: e7517b3c6c166af59b523c30e99f6baa)
+version = "0.0.1"
+description = "OCaml bindings to lzo compression library"
+archive(byte) = "lzo.cma"
+archive(native) = "lzo.cmxa"
+# OASIS_STOP
+

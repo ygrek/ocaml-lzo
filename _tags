@@ -1,0 +1,14 @@
+# OASIS_START
+# DO NOT EDIT (digest: 06a8cab7316c6c23acf79051a39f65cf)
+# Library lzo
+"src": include
+<src/lzo.{cma,cmxa}>: oasis_library_lzo_cclib
+"src/liblzo.lib": oasis_library_lzo_cclib
+"src/dlllzo.dll": oasis_library_lzo_cclib
+"src/liblzo.a": oasis_library_lzo_cclib
+"src/dlllzo.so": oasis_library_lzo_cclib
+<src/lzo.{cma,cmxa}>: use_liblzo
+# Executable test
+<test.{native,byte}>: use_lzo
+<*.ml{,i}>: use_lzo
+# OASIS_STOP
