@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 06a8cab7316c6c23acf79051a39f65cf)
+# DO NOT EDIT (digest: 8023d7350400009894f6ee0a78b51d2c)
 # Library lzo
 "src": include
 <src/lzo.{cma,cmxa}>: oasis_library_lzo_cclib
@@ -11,4 +11,5 @@
 # Executable test
 <test.{native,byte}>: use_lzo
 <*.ml{,i}>: use_lzo
+<test.{native,byte}>: custom
 # OASIS_STOP

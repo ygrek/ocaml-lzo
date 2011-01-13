@@ -1,11 +1,13 @@
 OASISFormat: 0.1
 Name:        lzo
 Version:     0.0.1
-Synopsis:    OCaml bindings to lzo compression library
+Synopsis:    Bindings to LZO data compression library
 Authors:     ygrek
+Copyrights:  (C) 2010 ygrek
 License:     LGPL-2.1 with OCaml linking exception
 Plugins:     DevFiles, META
 BuildTools:  ocamlbuild
+Homepage:    http://lzo.forge.ocamlcore.org/
 
 Library lzo
   Path: src
@@ -14,15 +16,27 @@ Library lzo
   CSources: lzo_stubs.c
 
 Executable test
+  Install: false
   Path: .
   MainIs: test.ml
   CompiledObject: best
+  Custom: true
   BuildDepends: lzo
 
 Test test
-  Command: test
+  Command: $test
+
+Document api
+  Title: API reference
+  Type: ocamlbuild
+  BuildTools: ocamldoc
+  Format: HTML
+  Index: index.html
+  XOCamlbuildPath:      src/
+  XOCamlbuildLibraries: lzo
 
 SourceRepository main
   Type: git
   Location: http://git.ocamlcore.org/lzo/lzo.git
+  Browser: http://git.ocamlcore.org/cgi-bin/gitweb.cgi?p=lzo/lzo.git
 
