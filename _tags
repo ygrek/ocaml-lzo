@@ -1,13 +1,26 @@
 # OASIS_START
-# DO NOT EDIT (digest: 8023d7350400009894f6ee0a78b51d2c)
+# DO NOT EDIT (digest: b61f96cf68034f159edac1d3614e9a42)
+# Ignore VCS directories, you can use the same kind of rule outside 
+# OASIS_START/STOP if you want to exclude directories that contains 
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
 # Library lzo
-"src": include
+"src/lzo.cmxs": use_lzo
 <src/lzo.{cma,cmxa}>: oasis_library_lzo_cclib
-"src/liblzo.lib": oasis_library_lzo_cclib
-"src/dlllzo.dll": oasis_library_lzo_cclib
-"src/liblzo.a": oasis_library_lzo_cclib
-"src/dlllzo.so": oasis_library_lzo_cclib
-<src/lzo.{cma,cmxa}>: use_liblzo
+"src/liblzo_stubs.lib": oasis_library_lzo_cclib
+"src/dlllzo_stubs.dll": oasis_library_lzo_cclib
+"src/liblzo_stubs.a": oasis_library_lzo_cclib
+"src/dlllzo_stubs.so": oasis_library_lzo_cclib
+<src/lzo.{cma,cmxa}>: use_liblzo_stubs
 # Executable test
 <test.{native,byte}>: use_lzo
 <*.ml{,i}>: use_lzo
