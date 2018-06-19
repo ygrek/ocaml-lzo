@@ -1,7 +1,8 @@
 # OASIS_START
-# DO NOT EDIT (digest: bcf7e5e14f3b86161bf9f9b5741ade70)
+# DO NOT EDIT (digest: c74c6075cd99947b0ef9e99622dce20a)
 version = "0.0.1"
 description = "Bindings to LZO data compression library"
+requires = "bytes"
 archive(byte) = "lzo.cma"
 archive(byte, plugin) = "lzo.cma"
 archive(native) = "lzo.cmxa"

@@ -12,6 +12,7 @@ Homepage:    http://ygrek.org.ua/p/ocaml-lzo/
 Library lzo
   Path: src
   Modules: Lzo
+  BuildDepends: bytes
   CClib: -llzo2
   CSources: lzo_stubs.c
 

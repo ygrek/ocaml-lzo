@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 9033fb93d31c0aa1d6e12de47cd47c6b)
+# DO NOT EDIT (digest: 1d907a913f32f74a13ff9eb390f53a90)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -22,8 +22,12 @@ true: annot, bin_annot
 "src/liblzo_stubs.a": oasis_library_lzo_cclib
 "src/dlllzo_stubs.so": oasis_library_lzo_cclib
 <src/lzo.{cma,cmxa}>: use_liblzo_stubs
+<src/*.ml{,i,y}>: pkg_bytes
+"src/lzo_stubs.c": pkg_bytes
 # Executable test
+<test.{native,byte}>: pkg_bytes
 <test.{native,byte}>: use_lzo
+<*.ml{,i,y}>: pkg_bytes
 <*.ml{,i,y}>: use_lzo
 <test.{native,byte}>: custom
 # OASIS_STOP
