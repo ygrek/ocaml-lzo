@@ -1,8 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: b61f96cf68034f159edac1d3614e9a42)
-# Ignore VCS directories, you can use the same kind of rule outside 
-# OASIS_START/STOP if you want to exclude directories that contains 
+# DO NOT EDIT (digest: 9033fb93d31c0aa1d6e12de47cd47c6b)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
+true: annot, bin_annot
 <**/.svn>: -traverse
 <**/.svn>: not_hygienic
 ".bzr": -traverse
@@ -23,6 +24,6 @@
 <src/lzo.{cma,cmxa}>: use_liblzo_stubs
 # Executable test
 <test.{native,byte}>: use_lzo
-<*.ml{,i}>: use_lzo
+<*.ml{,i,y}>: use_lzo
 <test.{native,byte}>: custom
 # OASIS_STOP

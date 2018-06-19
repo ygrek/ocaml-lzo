@@ -1,13 +1,13 @@
-OASISFormat: 0.1
+OASISFormat: 0.4
 Name:        lzo
 Version:     0.0.1
 Synopsis:    Bindings to LZO data compression library
 Authors:     ygrek
 Copyrights:  (C) 2010 ygrek
 License:     LGPL-2.1 with OCaml linking exception
-Plugins:     DevFiles, META
+Plugins:     DevFiles (0.4), META (0.4)
 BuildTools:  ocamlbuild
-Homepage:    http://lzo.forge.ocamlcore.org/
+Homepage:    http://ygrek.org.ua/p/ocaml-lzo/
 
 Library lzo
   Path: src
@@ -28,7 +28,7 @@ Test test
 
 Document api
   Title: API reference
-  Type: ocamlbuild
+  Type: ocamlbuild (0.4)
   BuildTools: ocamldoc
   Format: HTML
   Index: index.html
