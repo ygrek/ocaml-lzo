@@ -1,6 +1,6 @@
 OASISFormat: 0.4
 Name:        lzo
-Version:     0.0.1
+Version:     0.0.2
 Synopsis:    Bindings to LZO data compression library
 Authors:     ygrek
 Copyrights:  (C) 2010 ygrek
