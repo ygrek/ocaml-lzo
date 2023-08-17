@@ -1,5 +1,7 @@
 
-#include <lzo/lzo1x.h>
+#include <lzodefs.h>
+#include <lzoconf.h>
+#include <lzo1x.h>
 #include <assert.h>
 #include <memory.h>
 

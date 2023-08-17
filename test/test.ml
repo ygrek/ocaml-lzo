@@ -10,6 +10,6 @@ let () =
     assert (s = Lzo.decompress (Lzo.compress s) (String.length s));
   in
   for n = 0 to 1024 do check n done;
-  for n = 0 to 1024 do check (Random.int 16384 + 16384) done;
+  for _ = 0 to 1024 do check (Random.int 16384 + 16384) done;
   ()
 
