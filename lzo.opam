@@ -11,7 +11,7 @@ build: [
 ]
 depends: [
   "ocaml"
-  "dune" {>= "2.6"}
+  "dune" {>= "2.0"}
   "dune-configurator"
 ]
 depexts: [

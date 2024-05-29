@@ -1,7 +1,6 @@
 (library
  (name lzo)
  (public_name lzo)
- (flags :standard -linkall)
  (wrapped false)
  (foreign_stubs
   (language c)

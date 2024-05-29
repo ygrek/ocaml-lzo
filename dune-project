@@ -1,2 +1,2 @@
-(lang dune 3.10)
+(lang dune 2.0)
 (name lzo)
