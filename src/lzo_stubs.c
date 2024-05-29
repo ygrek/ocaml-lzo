@@ -14,7 +14,7 @@
 
 static void raise_error(char const* s)
 {
-  static value* exn = NULL;
+  static const value* exn = NULL;
   if (NULL == exn)
   {
     exn = caml_named_value("Lzo.Error");
@@ -62,8 +62,7 @@ CAMLprim value caml_lzo_compress(value v_s, value v_ofs, value v_len)
   }
   */
 
-  v_out = caml_alloc_string(out_len);
-  memcpy(String_val(v_out), out, out_len);
+  v_out = caml_alloc_initialized_string(out_len, out);
   caml_stat_free(mem);
 
   CAMLreturn(v_out);
