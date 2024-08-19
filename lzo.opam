@@ -6,6 +6,7 @@ doc: ["https://ygrek.org/p/ocaml-lzo/api/index.html"]
 bug-reports: "https://github.com/ygrek/ocaml-lzo/issues"
 dev-repo: "git+https://github.com/ygrek/ocaml-lzo.git"
 tags: ["org:ygrek"]
+license: "UNLICENSE"
 build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
@@ -13,6 +14,7 @@ depends: [
   "ocaml"
   "dune" {>= "2.0"}
   "dune-configurator"
+  "conf-pkg-config"
 ]
 depexts: [
   ["lzo2"] {os-family = "bsd"}
@@ -21,5 +23,8 @@ depexts: [
   ["lzo-dev"] {os-distribution = "alpine"}
   ["lzo-devel"] {os-family = "suse" | os-family = "opensuse"}
   ["lzo-devel"] {os-distribution = "centos" | os-distribution = "fedora"}
+  ["lzo"] {os-family = "archlinux"}
+  ["lzo-devel"] {os-distribution = "ol"}
 ]
 synopsis: "Bindings to LZO - a portable lossless data compression library"
+available: arch != "x86_32" & arch != "arm32"
